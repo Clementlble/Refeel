@@ -101,15 +101,14 @@ section{padding:130px 80px;}
 .saveurs-hdr{display:flex;align-items:flex-end;justify-content:space-between;gap:48px;margin-bottom:64px;}
 .saveurs-hdr-desc{font-size:16px;color:var(--grey);max-width:380px;line-height:1.8;flex-shrink:0;}
 .flav-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.fcard{border-radius:28px;padding:44px 36px 40px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;cursor:default;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.4s;}
-.fcard::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,0.52) 0%,transparent 55%);border-radius:inherit;pointer-events:none;z-index:1;}
+.fcard{border-radius:28px;padding:40px 28px 36px;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:24px;position:relative;overflow:hidden;cursor:default;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.4s;}
 .fcard:hover{transform:translateY(-10px) scale(1.015);box-shadow:0 28px 72px rgba(0,0,0,0.4);}
-.fcard-fruit{position:absolute;top:24px;right:24px;width:72px;height:72px;z-index:3;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);filter:drop-shadow(0 4px 12px rgba(0,0,0,0.25));}
-.fcard:hover .fcard-fruit{transform:scale(1.15) rotate(6deg);}
-.fcard-content{position:relative;z-index:3;}
-.fcard-name{font-size:24px;font-weight:800;color:var(--white);letter-spacing:-0.5px;line-height:1.15;}
-.fcard-sub{font-size:13px;color:rgba(255,255,255,0.72);margin-top:8px;line-height:1.6;}
-.fcard-tag{display:inline-block;margin-top:18px;background:rgba(255,255,255,0.18);backdrop-filter:blur(12px);color:var(--white);padding:6px 16px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:0.5px;width:fit-content;border:1px solid rgba(255,255,255,0.25);}
+.fcard-fruit{width:150px;height:150px;border-radius:50%;object-fit:cover;flex-shrink:0;border:4px solid rgba(255,255,255,0.35);box-shadow:0 8px 32px rgba(0,0,0,0.28);transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.4s;position:relative;z-index:2;}
+.fcard:hover .fcard-fruit{transform:scale(1.08) rotate(4deg);box-shadow:0 14px 48px rgba(0,0,0,0.38);}
+.fcard-content{text-align:center;position:relative;z-index:2;}
+.fcard-name{font-size:22px;font-weight:800;color:var(--white);letter-spacing:-0.4px;line-height:1.15;}
+.fcard-sub{font-size:13px;color:rgba(255,255,255,0.78);margin-top:8px;line-height:1.6;}
+.fcard-tag{display:inline-block;margin-top:16px;background:rgba(255,255,255,0.2);backdrop-filter:blur(12px);color:var(--white);padding:6px 16px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:0.5px;width:fit-content;border:1px solid rgba(255,255,255,0.3);}
 .fcard-citron{background:linear-gradient(140deg,#FFD12A 0%,#D96800 100%);}
 .fcard-hibiscus{background:linear-gradient(140deg,#FF3478 0%,#8A1040 100%);}
 .fcard-menthe{background:linear-gradient(140deg,#3DD9BC 0%,#006B5A 100%);}
@@ -515,7 +514,7 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,0.06);}
     <div class="flav-grid r d1">
       <div class="fcard fcard-citron">
         <div class="fcard-liq"><div class="fcard-liq-body"></div><div class="fcard-liq-surface"></div></div>
-        <div class="fcard-emoji">🍋</div>
+        <img class="fcard-fruit" src="https://thumbs.dreamstime.com/b/cocktail-au-citron-vert-rafraîchissant-avec-de-la-glace-431790760.jpg" alt="Citron gingembre" />
         <div class="fcard-content">
           <div class="fcard-name">Citron Gingembre</div>
           <div class="fcard-sub">Vif, épicé, tonique. Le coup de fouet du matin.</div>
@@ -524,7 +523,7 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,0.06);}
       </div>
       <div class="fcard fcard-hibiscus">
         <div class="fcard-liq"><div class="fcard-liq-body"></div><div class="fcard-liq-surface"></div></div>
-        <div class="fcard-emoji">🌺</div>
+        <img class="fcard-fruit" src="https://thumbs.dreamstime.com/b/boisson-rafraîchissante-au-thé-glacé-hibiscus-rouge-garnie-de-feuilles-menthe-et-fleurs-d-été-parfaite-idéal-pour-un-une-348014080.jpg" alt="Hibiscus" />
         <div class="fcard-content">
           <div class="fcard-name">Hibiscus</div>
           <div class="fcard-sub">Floral, acidulé, antioxydant. Riche en vitamine C.</div>
@@ -533,7 +532,7 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,0.06);}
       </div>
       <div class="fcard fcard-menthe">
         <div class="fcard-liq"><div class="fcard-liq-body"></div><div class="fcard-liq-surface"></div></div>
-        <div class="fcard-emoji">🌿</div>
+        <img class="fcard-fruit" src="https://media.istockphoto.com/id/183783284/fr/photo/la-menthe-fraîche.jpg?s=612x612&w=0&k=20&c=Snu2aMOKwJJqOfr3frdV-ego7FWaaeknh8XgsRsyH3A=" alt="Menthe fraîche" />
         <div class="fcard-content">
           <div class="fcard-name">Menthe Fraîche</div>
           <div class="fcard-sub">Fraîche, pure, revitalisante. L'hydratation ultime.</div>
@@ -542,7 +541,7 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,0.06);}
       </div>
       <div class="fcard fcard-agrumes">
         <div class="fcard-liq"><div class="fcard-liq-body"></div><div class="fcard-liq-surface"></div></div>
-        <div class="fcard-emoji">🍊</div>
+        <img class="fcard-fruit" src="https://media.istockphoto.com/id/179210275/photo/oranges-in-water.jpg?s=612x612&w=0&k=20&c=R5hw3Su-xeKSi9sQ9CLob4OInnFlPW-bCzMav6T4FP4=" alt="Agrumes" />
         <div class="fcard-content">
           <div class="fcard-name">Agrumes</div>
           <div class="fcard-sub">Orange, citron, pamplemousse. Un soleil en bouteille.</div>
@@ -551,7 +550,7 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,0.06);}
       </div>
       <div class="fcard fcard-fruits">
         <div class="fcard-liq"><div class="fcard-liq-body"></div><div class="fcard-liq-surface"></div></div>
-        <div class="fcard-emoji">🫐</div>
+        <img class="fcard-fruit" src="https://img.freepik.com/photos-premium/boisson-aux-fruits-rafraichissante-froide-baies-groseilles-rouges-dans-flute-verre-transparent-glace-fruits-au-citron-vert-table-bois-clair-fond-blanc_654281-71.jpg" alt="Fruits rouges" />
         <div class="fcard-content">
           <div class="fcard-name">Fruits Rouges</div>
           <div class="fcard-sub">Cassis, framboise, myrtille. Riche et profond.</div>
@@ -560,7 +559,7 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,0.06);}
       </div>
       <div class="fcard fcard-pomme">
         <div class="fcard-liq"><div class="fcard-liq-body"></div><div class="fcard-liq-surface"></div></div>
-        <div class="fcard-emoji">🍏</div>
+        <img class="fcard-fruit" src="https://media.istockphoto.com/id/1473429125/fr/photo/pomme-fraîche-avec-éclaboussure-de-jus-de-pomme.jpg?s=612x612&w=0&k=20&c=GEWj2bhxx0xUe2JA-p3Je12uo1afzWX42vldJCT9me4=" alt="Pomme cannelle" />
         <div class="fcard-content">
           <div class="fcard-name">Pomme Cannelle</div>
           <div class="fcard-sub">Doux, réconfortant, parfait après l'effort.</div>
